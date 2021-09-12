@@ -15,19 +15,6 @@
         padding: 0;
         list-style: none;
         display: flex;
-        
-        li{
-            font-size: 14px;
-            margin-right: 50px;
-            padding: 7px;
-            border-radius: 10px;
-            cursor: pointer;
-
-            &.active{
-                background-color: $mainColor;
-                color: white;
-            }
-        }
     }
     .container{
         width: 70%;
@@ -47,6 +34,7 @@
             color: white;
             position: relative;
             transition: all .5s ease;
+            cursor: pointer;
 
             h3{
                 position: absolute;

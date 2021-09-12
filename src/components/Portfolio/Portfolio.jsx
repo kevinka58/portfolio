@@ -1,33 +1,58 @@
-import React from 'react'
-import "./Portfolio.scss"
+import { React, useState, useEffect } from "react";
+import PortfolioList from "../PortfolioList/PortfolioList";
+import "./Portfolio.scss";
+import {featuredPortfolio, webApp} from "../../data";
 
 export default function Portfolio() {
-    return (
-        <div className="portfolio" id="portfolio">
-            <h1>Portfolio</h1>
-            <ul>
-                <li className="active">Featured</li>
-                <li>Web App</li>
-                <li>Games</li>
-            </ul>
-            <div className="container">
-                <div className="item">
-                    <img src="Assets/portfolio1.png" alt="FC Board (Web App)" />
-                    <h3>Final Fantasy 14: Free Company Finder</h3>
-                </div>
-                <div className="item">
-                    <img src="Assets/portfolio1.png" alt="FC Board (Web App)" />
-                    <h3>Final Fantasy 14: Free Company Finder</h3>
-                </div>
-                <div className="item">
-                    <img src="Assets/portfolio1.png" alt="FC Board (Web App)" />
-                    <h3>Final Fantasy 14: Free Company Finder</h3>
-                </div>
-                <div className="item">
-                    <img src="Assets/portfolio1.png" alt="FC Board (Web App)" />
-                    <h3>Final Fantasy 14: Free Company Finder</h3>
-                </div>
-            </div>
+  const [selected, setSelected] = useState("featured");
+  const [data, setData] = useState([]);
+  const list = [
+    {
+      id: "featured",
+      title: "Featured",
+    },
+    {
+      id: "web",
+      title: "Web App",
+    },
+    {
+      id: "game",
+      title: "Games",
+    },
+  ];
+
+  useEffect(()=>{
+    switch(selected){
+        case "featured":
+            setData(featuredPortfolio);
+            break;
+        case "web":
+            setData(webApp);
+            break;
+    }
+  },[selected])
+
+  return (
+    <div className="portfolio" id="portfolio">
+      <h1>Portfolio</h1>
+      <ul>
+        {list.map((item) => (
+          <PortfolioList
+            title={item.title}
+            active={selected === item.id}
+            setSelected={setSelected}
+            id={item.id}
+          />
+        ))}
+      </ul>
+      <div className="container">
+          {data.map((d) => (
+              <div className="item">
+          <img src={d.img} alt="FC Board (Web App)" />
+          <h3>{d.title}</h3>
         </div>
-    )
+            ))}
+      </div>
+    </div>
+  );
 }
