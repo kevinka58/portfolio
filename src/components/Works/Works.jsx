@@ -1,11 +1,11 @@
-import React from 'react'
+import {React, useState} from 'react'
 import "./Works.scss"
 import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
 export default function Works() {
-
+    const [currentSlide, setCurrentSlide] = useState(0)
     const data = [
         {
             id: "1",
@@ -15,9 +15,14 @@ export default function Works() {
             img: "Assets/programming.jpeg",
         },
     ];
+
+    const handleClick = (way) => {
+        way === "left" ? currentSlide(currentSlide > 0 ? currentSlide-1 : 2) : 
+        setCurrentSlide(currentSlide<data.length -1 ? currentSlide+1 : 0);
+    }
     return (
         <div className="works" id="works">
-            <div className="slider">
+            <div className="slider" style={{transform: `translateX(-${currentSlide *100}vw)` }}>
                 {data.map((d) => (
 
                     <div className="container">
@@ -39,8 +44,8 @@ export default function Works() {
                 </div>
                 ))}
             </div>
-            <ArrowBackIosIcon className="arrow left"/>
-            <ArrowForwardIosIcon className="arrow right"/>
+            <ArrowBackIosIcon className="arrow left" onClick={() =>handleClick("left")}/>
+            <ArrowForwardIosIcon className="arrow right" onClick={() =>handleClick()}/>
         </div>
     );
 }
