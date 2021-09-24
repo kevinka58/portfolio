@@ -14,6 +14,13 @@ export default function Works() {
             desc: "This is how I design my site",
             img: "Assets/programming.jpeg",
         },
+        {
+            id: "2",
+            icon: <PhoneAndroidIcon />,
+            title: "A bit about me!",
+            desc: "I was born and raised in the San Fernando Valley, apart of the Greater Los Angeles Area. I really enjoy tech, video games, and all things cars!",
+            img: "Assets/programming.jpeg",
+        },
     ];
 
     const handleClick = (way) => {
