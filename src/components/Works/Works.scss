@@ -52,11 +52,13 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                box-shadow: 0px 2px 25px -2px black;
+
 
                 @include mobile{
                     width: 80%;
-                    height: 150px;
-                    margin: 15px 0;
+                    height: 230px;
+                    margin: 5px 0;
                 }
 
                 .left{
@@ -71,6 +73,7 @@
                         width: 90%;
                         height: 70%;
                         display: flex;
+                        padding: 20px;
                         flex-direction: column;
                         justify-content: space-between;
 
@@ -78,7 +81,7 @@
                             width: 40px;
                             height: 40px;
                             border-radius: 50%;
-                            background-color: lightblue;
+                            background-color: wheat;
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -99,6 +102,7 @@
                         }
                         h2{
                             font-size: 20px;
+                            padding-bottom: 20px;
 
                             @include mobile{
                                 font-size: 13px;
@@ -107,9 +111,6 @@
                         p{
                             font-size: 13px;
 
-                            @include mobile{
-                                display: none;
-                            }
                         }
                         span{
                             font-size: 12px;

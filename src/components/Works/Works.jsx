@@ -9,10 +9,10 @@ export default function Works() {
     const data = [
         {
             id: "1",
-            icon: <PhoneAndroidIcon />,
-            title: "Web Design",
-            desc: "This is how I design my site",
-            img: "Assets/programming.jpeg",
+            icon: "Assets/GAIcon.png",
+            title: "General Assembly",
+            desc: "Full-stack software engineering immersive course comprising of a twelve-week, 450+ hour program focused on product development fundamentals, object-oriented programming, MVC frameworks, data modeling, and team collaboration strategies.",
+            img: "Assets/GAlogo.png",
         },
         {
             id: "2",
@@ -21,10 +21,17 @@ export default function Works() {
             desc: "I was born and raised in the San Fernando Valley, apart of the Greater Los Angeles Area. I really enjoy tech, video games, and all things cars!",
             img: "Assets/programming.jpeg",
         },
+        {
+            id: "3",
+            icon: <PhoneAndroidIcon />,
+            title: "A bit about me!",
+            desc: "I was born and raised in the San Fernando Valley, apart of the Greater Los Angeles Area. I really enjoy tech, video games, and all things cars!",
+            img: "Assets/programming.jpeg",
+        },
     ];
 
     const handleClick = (way) => {
-        way === "left" ? currentSlide(currentSlide > 0 ? currentSlide-1 : 2) : 
+        way === "left" ? setCurrentSlide(currentSlide > 0 ? currentSlide-1 : 2) : 
         setCurrentSlide(currentSlide<data.length -1 ? currentSlide+1 : 0);
     }
     return (
@@ -37,11 +44,11 @@ export default function Works() {
                         <div className="left">
                             <div className="leftContainer">
                                 <div className="imgContainer">
-                                    <div className="phoneIcon">{d.icon}</div>
+                                    <img className="phoneIcon" src={d.icon} alt="General Assembly Logo" />
                                 </div>
                                 <h2>{d.title}</h2>
                                 <p>{d.desc}</p>
-                                <span>Projects</span>
+                                {/* <span>Projects</span> */}
                             </div>
                         </div>
                         <div className="right">
