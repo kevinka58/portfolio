@@ -11,14 +11,14 @@ export default function Portfolio() {
       id: "featured",
       title: "Featured",
     },
-    {
-      id: "web",
-      title: "Web App",
-    },
-    {
-      id: "game",
-      title: "Games",
-    },
+    // {
+    //   id: "web",
+    //   title: "Web App",
+    // },
+    // {
+    //   id: "game",
+    //   title: "Games",
+    // },
   ];
 
   useEffect(()=>{
@@ -34,7 +34,7 @@ export default function Portfolio() {
 
   return (
     <div className="portfolio" id="portfolio">
-      <h1>Portfolio</h1>
+      <h1>Projects</h1>
       <ul>
         {list.map((item) => (
           <PortfolioList
@@ -49,7 +49,7 @@ export default function Portfolio() {
           {data.map((d) => (
               <div className="item">
           <img src={d.img} alt="FC Board (Web App)" />
-          <h3>{d.title}</h3>
+          <h3><a href={d.link} target="_blank" rel="noreferrer">{d.title}</a></h3>
         </div>
             ))}
       </div>
