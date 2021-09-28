@@ -7,7 +7,7 @@ export const featuredPortfolio = [
     },
     {
         id: 2,
-        title: "FC Board: Find your Free Company! FFXIV",
+        title: "FC Board: Find Your Free Company! FFXIV",
         img: "Assets/portfolio1.png",
         link: "https://free-company-app.herokuapp.com/",
     },

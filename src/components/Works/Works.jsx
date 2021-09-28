@@ -23,9 +23,10 @@ export default function Works() {
         {
             id: "3",
             icon: "Assets/certificateicon.png",
-            title: "Here is my certificate!",
-            desc: "Eager to put more hours under my belt, and currently trying to become a more seasoned developer!",
-            img: "Assets/certificate.png",
+            title: "Checkout my LinkedIn Profile",
+            link: <a href="https://www.linkedin.com/in/kevinayala4/">Click Here</a>,
+            desc: "Come connect with me on LinkedIn!",
+            img: "Assets/LinkedIn.jpeg",
         },
     ];
 
@@ -45,7 +46,7 @@ export default function Works() {
                                 <div className="imgContainer">
                                     <img className="phoneIcon" src={d.icon} alt="General Assembly Logo" />
                                 </div>
-                                <h2>{d.title}</h2>
+                                <h2>{d.title} {d.link}</h2>
                                 <p>{d.desc}</p>
                                 {/* <span>Projects</span> */}
                             </div>
