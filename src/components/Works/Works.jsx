@@ -1,6 +1,5 @@
 import {React, useState} from 'react'
 import "./Works.scss"
-import PhoneAndroidIcon from '@material-ui/icons/PhoneAndroid';
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 
@@ -11,22 +10,22 @@ export default function Works() {
             id: "1",
             icon: "Assets/GAIcon.png",
             title: "General Assembly",
-            desc: "Full-stack software engineering immersive course comprising of a twelve-week, 450+ hour program focused on product development fundamentals, object-oriented programming, MVC frameworks, data modeling, and team collaboration strategies.",
+            desc: "Have been certified through a full-stack software engineering immersive course comprising of a twelve-week, 450+ hour program focused on product development fundamentals, object-oriented programming, MVC frameworks, data modeling, and team collaboration strategies.",
             img: "Assets/GAlogo.png",
         },
         {
             id: "2",
-            icon: <PhoneAndroidIcon />,
+            icon: "Assets/avatar3.png",
             title: "A bit about me!",
             desc: "I was born and raised in the San Fernando Valley, apart of the Greater Los Angeles Area. I really enjoy tech, video games, and all things cars!",
-            img: "Assets/programming.jpeg",
+            img: "Assets/portfolio-collage.jpg",
         },
         {
             id: "3",
-            icon: <PhoneAndroidIcon />,
-            title: "A bit about me!",
-            desc: "I was born and raised in the San Fernando Valley, apart of the Greater Los Angeles Area. I really enjoy tech, video games, and all things cars!",
-            img: "Assets/programming.jpeg",
+            icon: "Assets/certificateicon.png",
+            title: "Here is my certificate!",
+            desc: "Eager to put more hours under my belt, and currently trying to become a more seasoned developer!",
+            img: "Assets/certificate.png",
         },
     ];
 
