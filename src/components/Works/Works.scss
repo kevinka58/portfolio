@@ -57,7 +57,7 @@
 
                 @include mobile{
                     width: 80%;
-                    height: 230px;
+                    height: 180px;
                     margin: 5px 0;
                 }
 
@@ -110,6 +110,10 @@
                         }
                         p{
                             font-size: 13px;
+
+                            @include mobile{
+                                display: none;
+                            }
 
                         }
                         span{
