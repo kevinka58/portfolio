@@ -9,6 +9,7 @@
     h1{
         margin: 30px;
         font-size: 50px;
+        overflow: hidden;
 
         @include mobile{
             font-size: 20px
