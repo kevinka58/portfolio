@@ -109,12 +109,14 @@
                         h2{
                             font-size: 20px;
                             padding-bottom: 20px;
+                            overflow: hidden;
 
                             @include mobile{
                                 font-size: 13px;
                             }
                         }
                         p{
+                            overflow: hidden;
                             font-size: 13px;
 
                             @include mobile{
